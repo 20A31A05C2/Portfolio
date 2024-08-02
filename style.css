@@ -1,0 +1,623 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Navbar styling */
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  position: fixed; /* Fixed position for navbar */
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white; /* Background color for visibility */
+  z-index: 500; /* Ensures navbar is on top of other content */
+}
+
+#name {
+  font-size: 2rem;
+}
+
+nav .nav-container {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+}
+
+nav .nav-links {
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 1rem 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: rgb(98, 169, 92);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(214, 55, 55);
+}
+
+#arrow {
+  width: 10px;
+  height: 10px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+#con {
+  display: flex;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+#con:hover {
+  color: rgb(98, 169, 92);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(214, 55, 55);
+}
+
+#con img {
+  margin-left: 0.5rem;
+}
+
+#moon {
+  width: 40px;
+  height: 40px;
+  margin-right: 4rem;
+}
+
+/* Section styling */
+section {
+  padding-top: 2rem; /* To account for the fixed navbar */
+}
+
+/* Top section styling */
+#top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 12rem; /* Add padding-top to avoid overlap with the navbar */
+}
+
+#pro {
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1rem;
+  padding: 1.5rem;
+}
+
+#link {
+  width: 2rem;
+  height: 2rem;
+  padding-bottom: 4px;
+}
+
+#loc {
+  font-size: 1.5rem;
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 1.5rem 1rem;
+}
+
+#links-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#links-container a {
+  font-size: 1.5rem;
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+#links-container a:hover {
+  color: rgb(98, 169, 92);
+  background-color: rgb(193, 227, 228);
+}
+
+#links-container a img {
+  margin-left: 0.5rem;
+}
+
+/* Profile section styling */
+/* About section styling */
+#about {
+  display: flex; /* Use flex layout for horizontal alignment */
+  align-items: flex-start; /* Align items to the start of the cross-axis */
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 10rem; /* Add margin-top to create space from the top section */
+}
+
+/* Profile section styling */
+.profile {
+  display: flex;
+  flex-direction: column; /* Column layout for profile image and badge */
+  align-items: flex-start; /* Align items to the left */
+  margin-right: 60px; /* Increase space between profile section and content */
+  flex: 1; /* Allow profile section to take some space */
+  max-width: 300px; /* Limit the maximum width */
+}
+
+#profile-pic {
+  width: 10em;
+  height: 10em;
+  margin-left: 10rem;
+}
+
+.badge {
+  background-color: #fff;
+  padding: 10px 20px;
+  margin-left: 5rem;
+  border-radius: 50px;
+  border: 2px solid #7bb682;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Content section styling */
+.content {
+  display: flex;
+  flex-direction: column; /* Column layout for content */
+  flex: 2; /* Allow content section to take more space */
+  margin-left: 20px; /* Add margin-left to create space from the profile section */
+}
+
+/* Intro section styling */
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Details section styling */
+.details {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: flex-start; /* Align items to the start */
+  gap: 40px; /* Space between detail items */
+  margin-bottom: 30px;
+}
+
+/* Detail item styling */
+.detail-item {
+  flex: 1 1 300px; /* Allow detail items to grow and shrink */
+  max-width: 300px; /* Set maximum width */
+  text-align: center;
+  padding: 10px;
+  border: 2px solid rgb(150, 206, 150);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0);
+}
+
+/* Tools section styling */
+.tools {
+  text-align: center;
+}
+
+.tools-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tools-icons img {
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.tools-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Services section styling */
+
+/* Services section styling */
+.container {
+  max-width: 1200px; /* Increase max-width for larger screens */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between; /* Ensure cards are spaced evenly */
+  flex-wrap: wrap; /* Allow cards to wrap onto the next line if needed */
+  gap: 20px; /* Space between cards */
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #7bb682;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgb(150, 206, 150);
+  flex: 1 1 22%; /* Flex-grow and flex-shrink with percentage width */
+  max-width: 22%; /* Ensure cards fit neatly in a row */
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: left;
+  box-sizing: border-box; /* Include padding and border in the width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0); /* Increase shadow on hover */
+}
+
+.service-card .icon {
+  font-size: 2em; /* Adjust icon size */
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95em;
+  margin-bottom: 15px; /* Reduced margin for paragraph */
+}
+
+.service-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  display: block; /* Ensures the link takes up full width for better alignment */
+  margin-top: 10px; /* Space between paragraph and "Read more" link */
+}
+
+.service-card a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 25%; /* Ensure images do not exceed their container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive design: Adjust for smaller screens */
+@media (max-width: 1200px) {
+  .service-card {
+    flex: 1 1 30%; /* Adjust to fit three cards per row on medium screens */
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex: 1 1 45%; /* Adjust to fit two cards per row on smaller screens */
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    flex: 1 1 100%; /* Adjust to fit one card per row on extra small screens */
+    max-width: 100%;
+  }
+}
+
+/* Work section styling */
+
+/* Projects section styling */
+#projects {
+  padding: 2rem 1rem; /* Add padding for spacing */
+  background-color: #ffffff; /* Background color for the section */
+  margin-top: 5rem; /* Space from previous section */
+}
+
+#projects .section__text__p1 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+#projects .title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.experience-details-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center cards horizontally */
+}
+
+.details-container {
+  background: #ffffff;
+  border: 1px solid #7bb682;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex: 1 1 30%; /* Adjust flex basis to fit multiple cards in a row */
+  max-width: 30%; /* Ensure cards fit in a row */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.article-container {
+  margin-bottom: 1rem;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.experience-sub-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+}
+
+.btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6aa56c;
+}
+
+@media (max-width: 1200px) {
+  .details-container {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .details-container {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* contact*/
+#contact {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 5rem;
+}
+
+#contact h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#contact h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 2px solid #7bb682;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: 2px solid black;
+  width: 100%; /* Full width of the form group */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resize only */
+  min-height: 100px; /* Set a minimum height for textarea */
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+  font-size: 1rem; /* Ensure placeholder font size is 1rem */
+}
+
+/* Button styling */
+button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6aa56c; /* Slightly darker shade on hover */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  #contact {
+    padding: 20px;
+  }
+
+  form {
+    padding: 15px;
+  }
+}
+
+/* Footer section styling */
+
+/* Footer section styling */
+footer {
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  margin-top: 12rem;
+  padding: 1rem 0; /* Add padding to give some space around the footer content */
+}
+
+.footer-content {
+  margin-bottom: 0; /* Remove bottom margin from footer-content */
+}
+
+#mail {
+  margin-bottom: 0.5rem; /* Reduce margin-bottom to decrease space below h2 */
+}
+
+#mail h2 {
+  font-size: 1.5em;
+  color: #000000;
+  margin-bottom: 0.25rem; /* Reduce margin-bottom to decrease space below h2 */
+}
+
+#para {
+  font-size: 1em;
+  color: #000000;
+}
+
+#mail img {
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 20px;
+}
+
+hr {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1.5px solid #7bb682;
+}
+
+#pa {
+  font-size: 0.875em;
+  color: #000000;
+  margin-bottom: 0.2px;
+}
+
+#foot a {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+#foot a:hover {
+  color: #7bb682;
+}
+
+#foot a:last-child {
+  color: #000000;
+}
+
+#foot a:last-child:hover {
+  color: #7bb682;
+}
